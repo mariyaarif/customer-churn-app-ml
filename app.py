@@ -13,9 +13,9 @@ st.set_page_config(
 # Load Model and Encoders
 @st.cache_resource
 def load_artifacts():
-    with open('model\customer_churn.pkl', 'rb') as f:
+    with open('customer_churn.pkl', 'rb') as f:
         model_data = pickle.load(f)
-    with open('model\encoders.pkl', 'rb') as f:
+    with open('encoders.pkl', 'rb') as f:
         encoders = pickle.load(f)
     return model_data['model'], model_data['features_name'], encoders
 
